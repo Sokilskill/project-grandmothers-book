@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/project-recipes/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/project-grandmothers-book/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,12 +12,88 @@
     />
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/project-recipes/assets/index-fdd66e5f.js"></script>
-    <link rel="stylesheet" href="/project-recipes/assets/index-c91da55a.css">
+    <script type="module" crossorigin src="/project-grandmothers-book/assets/index-c4b58ae4.js"></script>
+    <link rel="stylesheet" href="/project-grandmothers-book/assets/index-2012180b.css">
   </head>
   <body>
     <!-- Sergii Sokolovskyi -->
-    
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link link">Home</a>
+          <a href="./favorites.html" class="nav-link link">Favorites</a>
+        </li>
+      </ul>
+
+      <a href="./index.html" class="link logo-link">
+        <img
+          src="../img/header/logo.svg"
+          alt="logo-mobile tasty treats"
+          class="logo-img"
+          width="83"
+          height="18"
+      /></a>
+    </nav>
+
+    <!-- shopping cart  -->
+    <button type="button" class="shopping-cart">
+      <svg class="" width="24" height="24">
+        <use href=""></use>
+      </svg>
+    </button>
+
+    <button class="switch">
+      <svg class="switch-light" width="46" height="20">
+        <use href=""></use>
+      </svg>
+    </button>
+
+    <!-- Burger -->
+    <!-- button burger-menu -->
+    <button
+      type="button"
+      class="btn-open-menu js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="btn-open-menu-icon" width="24" height="24">
+        <use href=""></use>
+      </svg>
+    </button>
+
+    <!-- MOB-MENU -->
+
+    <div class="mob-menu js-mob-menu" id="mobile-menu">
+      <button type="button" class="button-close js-close-menu">
+        <svg class="close-icon" width="32" height="32">
+          <use href=""></use>
+        </svg>
+      </button>
+
+      <!-- mobile menu navigation -->
+      <nav class="mob-page-nav">
+        <ul class="mob-nav-list">
+          <li class="mob-nav-item">
+            <a class="nav-link link" href="./">Home</a>
+          </li>
+          <li class="mob-nav-item">
+            <a class="nav-link link" href="./favorites.html">Favorites</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- switch -->
+      <button class="switch">
+        <svg class="switch-light" width="46" height="20">
+          <use href=""></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
 
     <!-- Pavlo Lystopad -->
     
