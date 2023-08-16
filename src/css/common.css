@@ -1,0 +1,38 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('./reset.css');
+@import url('./hero.css');
+@import url('./header.css');
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: calc(18 / 16);
+  background-color: F8F8F8;
+}
+.container {
+  max-width: 366px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 734px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1110px;
+  }
+}
