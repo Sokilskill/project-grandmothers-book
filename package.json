@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-recipes/",
+    "build": "vite build --base=/project-grandmothers-book/",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.0.0",
-    "glob": "^8.1.0"
+    "glob": "^8.1.0",
+    "vite": "^4.0.0"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
