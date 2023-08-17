@@ -10,7 +10,7 @@
 @import url('./hero.css');
 
 :root {
-  --cubic-bezier: ;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --default-color: #fff;
   --main-text-color: #9bb537;
   --background-color: #f8f8f8;
