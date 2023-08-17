@@ -1,4 +1,5 @@
 /* Reset styles */
+
 h1,
 h2,
 h3,
@@ -17,8 +18,15 @@ ul {
 
 button {
   cursor: pointer;
+  border: none;
+  color: inherit;
+  background-color: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 img {
   display: block;
   max-width: 100%;

@@ -11,7 +11,13 @@
 
 :root {
   --cubic-bezier: ;
-  --color: #9bb537;
+  --default-color: #fff;
+  --main-text-color: #9bb537;
+  --background-color: #f8f8f8;
+  --secondary-background-color: #161616;
+  --secondary-text-color: #050505;
+  --alfa-text-color: rgba(5, 5, 5, 0.8);
+  --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -23,12 +29,13 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: calc(18 / 16);
-  background-color: #f8f8f8;
+  background-color: var(--background-color, #f8f8f8);
 }
 .container {
   max-width: 366px;
   margin: 0 auto;
   padding: 0 20px;
+  outline: 2px solid red;
 }
 
 @media screen and (min-width: 768px) {
