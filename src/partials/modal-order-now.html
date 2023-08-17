@@ -10,19 +10,22 @@
             <div class="modal-field">
                 <label class="input-text" for="user-name">Name</label>
                 <div class="input-wrap">
-                    <input class="modal-input" id="user-name" name="user-name" type="text" required />
+                    <input class="modal-input" id="user-name" name="user-name" type="text" pattern="\w{3,16}"
+                        required />
                 </div>
             </div>
             <div class="modal-field">
                 <label class="input-text" for="user-phone">Phone number</label>
                 <div class="input-wrap">
-                    <input class="modal-input" id="user-phone" name="user-phone" type="tel" required />
+                    <input class="modal-input tel-input" id="user-phone" name="user-phone" type="tel"
+                        pattern="+38[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="+38XXXXXXXXXX" required />
                 </div>
             </div>
             <div class="modal-field">
                 <label class="input-text" for="user-email">Email</label>
                 <div class="input-wrap">
-                    <input class="modal-input" id="user-email" name="user-email" type="text" required />
+                    <input class="modal-input" id="user-email" name="user-email" type="text"
+                        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
                 </div>
             </div>
             <div class="modal-field-last">
