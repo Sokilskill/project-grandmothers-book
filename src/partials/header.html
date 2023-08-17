@@ -1,76 +1,87 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="./index.html" class="nav-link link">Home</a>
-          <a href="./favorites.html" class="nav-link link">Favorites</a>
-        </li>
-      </ul>
-
-      <a href="./index.html" class="link logo-link">
-        <img
-          src="../img/header/logo.svg"
-          alt="logo-mobile tasty treats"
-          class="logo-img"
-          width="83"
-          height="18"
-      /></a>
-    </nav>
-
-    <!-- shopping cart  -->
-    <button type="button" class="shopping-cart">
-      <svg class="" width="24" height="24">
-        <use href=""></use>
-      </svg>
-    </button>
-
-    <button class="switch">
-      <svg class="switch-light" width="46" height="20">
-        <use href=""></use>
-      </svg>
-    </button>
-
-    <!-- Burger -->
-    <!-- button burger-menu -->
-    <button
-      type="button"
-      class="btn-open-menu js-open-menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <svg class="btn-open-menu-icon" width="24" height="24">
-        <use href=""></use>
-      </svg>
-    </button>
-
-    <!-- MOB-MENU -->
-
-    <div class="mob-menu js-mob-menu" id="mobile-menu">
-      <button type="button" class="button-close js-close-menu">
-        <svg class="close-icon" width="32" height="32">
-          <use href=""></use>
-        </svg>
-      </button>
-
-      <!-- mobile menu navigation -->
-      <nav class="mob-page-nav">
-        <ul class="mob-nav-list">
-          <li class="mob-nav-item">
-            <a class="nav-link link" href="./">Home</a>
+  <div class="container header-wrapper">
+    <div class="header-wrap">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link nav-link-home">Home</a>
           </li>
-          <li class="mob-nav-item">
-            <a class="nav-link link" href="./favorites.html">Favorites</a>
+          <li>
+            <a href="./favorites.html" class="nav-link nav-link-favorites"
+              >Favorites</a
+            >
           </li>
         </ul>
+
+        <a href="./index.html" class="link logo-link">
+          <img
+            src="./img/header/logo.svg"
+            alt="logo-mobile tasty treats"
+            class="logo-img"
+            width="83"
+            height="18"
+        /></a>
       </nav>
 
-      <!-- switch -->
-      <button class="switch">
+      <div class="button-wrap">
+        <!-- shopping cart  -->
+        <button type="button" class="shopping-cart">
+          <svg class="" width="24" height="24">
+            <use href="./img/icons.svg#icon-shopping-cart"></use>
+          </svg>
+        </button>
+
+        <button class="btn-switch btn-switch-desktop">
+          <svg class="switch-light" width="46" height="20">
+            <use href="./img/icons.svg#icon-switch"></use>
+          </svg>
+        </button>
+
+        <!-- Burger -->
+        <!-- button burger-menu -->
+        <button
+          type="button"
+          class="btn-open-menu js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          ===
+          <!-- <svg class="btn-open-menu-icon" width="24" height="24">
+            <use href=""></use>
+          </svg> -->
+        </button>
+      </div>
+    </div>
+    <!-- MOB-MENU -->
+
+    <!-- <div class="mob-menu js-mob-menu" id="mobile-menu">
+      <button type="button" class="button-close js-close-menu">
+        <svg class="close-icon" width="24" height="24">
+          <use href="./img/icons.svg#icon-button-close"></use>
+        </svg>
+      </button> -->
+
+    <!-- mobile menu navigation -->
+    <!-- <nav class="mob-page-nav">
+        <ul class="mob-nav-list">
+          <li class="mob-nav-item">
+            <a class="nav-link nav-link-home" href="./">Home</a>
+          </li>
+
+          <li class="mob-nav-item">
+            <a class="nav-link nav-link-favorites" href="./favorites.html"
+              >Favorites</a
+            >
+          </li>
+        </ul>
+      </nav> -->
+
+    <!-- switch -->
+    <!-- <button class="btn-switch">
         <svg class="switch-light" width="46" height="20">
-          <use href=""></use>
+          <use href="./img/icons.svg#icon-switch"></use>
         </svg>
       </button>
-    </div>
+    </div> -->
   </div>
 </header>

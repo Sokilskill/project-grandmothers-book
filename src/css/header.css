@@ -1,15 +1,18 @@
 .header {
   padding: 20px 0;
 }
-
-@media screen and (max-width: 768px) {
-  .nav-list {
-    display: none;
-  }
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: flex;
+}
+.nav-item {
 }
 
 .nav-link {
-  font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
@@ -17,4 +20,67 @@
 .nav-link:hover,
 .nav-link:focus {
   color: #747bff;
+}
+
+.nav-link {
+  font-size: 12px;
+}
+.nav-link-home {
+  color: var(--main-text-color, #9bb537);
+}
+.nav-link-favorites {
+  font-weight: 400;
+  color: var(--secondary-text-color, #050505);
+}
+.link {
+}
+.logo-link {
+}
+.logo-img {
+}
+.button-wrap {
+  display: flex;
+}
+.shopping-cart {
+  margin-right: 14px;
+}
+.btn-switch {
+  color: #fff;
+  background-color: inherit;
+}
+.switch-light {
+}
+.btn-open-menu {
+}
+.js-open-menu {
+}
+.btn-open-menu-icon {
+}
+.mob-menu {
+}
+.js-mob-menu {
+}
+.button-close {
+}
+.js-close-menu {
+}
+.close-icon {
+}
+.mob-page-nav {
+}
+.mob-nav-list {
+}
+.mob-nav-item {
+}
+
+.nav {
+}
+.nav-list {
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list,
+  .btn-switch-desktop {
+    display: none;
+  }
 }
