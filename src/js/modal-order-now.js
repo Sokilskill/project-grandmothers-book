@@ -1,19 +1,24 @@
 // * Order Now
+const elements = {
+  heroOrderBtnEl: document.querySelector('.hero-order-btn'),
+  modalCloseBtnEl: document.querySelector('.modal-close-btn'),
+  shoppingCartBtnEl: document.querySelector('.shopping-cart'),
+  backdropEl: document.querySelector('.backdrop'),
+};
 
-const heroOrderBtnEl = document.querySelector('.hero-order-btn');
-const modalCloseBtnEl = document.querySelector('.modal-close-btn');
-const backdropEl = document.querySelector('.backdrop');
-
-heroOrderBtnEl.addEventListener('click', orderNowOpn);
+elements.heroOrderBtnEl.addEventListener('click', orderNowOpn);
+elements.shoppingCartBtnEl.addEventListener('click', orderNowOpn);
 
 function orderNowOpn(e) {
-  heroOrderBtnEl.removeEventListener('click', orderNowOpn);
-  modalCloseBtnEl.addEventListener('click', modalClose);
-  backdropEl.classList.remove('is-hidden');
+  elements.heroOrderBtnEl.removeEventListener('click', orderNowOpn);
+  elements.shoppingCartBtnEl.removeEventListener('click', orderNowOpn);
+  elements.modalCloseBtnEl.addEventListener('click', modalClose);
+  elements.backdropEl.classList.remove('is-hidden');
 }
 
 function modalClose(e) {
-  modalCloseBtnEl.removeEventListener('click', modalClose);
-  heroOrderBtnEl.addEventListener('click', orderNowOpn);
-  backdropEl.classList.add('is-hidden');
+  elements.modalCloseBtnEl.removeEventListener('click', modalClose);
+  elements.heroOrderBtnEl.addEventListener('click', orderNowOpn);
+  elements.shoppingCartBtnEl.addEventListener('click', orderNowOpn);
+  elements.backdropEl.classList.add('is-hidden');
 }
