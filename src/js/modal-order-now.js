@@ -1,42 +1,42 @@
 // * Order Now
 const elements = {
-  heroOrderBtnEl: document.querySelector('.hero-order-btn'),
-  modalCloseBtnEl: document.querySelector('.modal-close-btn'),
-  shoppingCartBtnEl: document.querySelector('.shopping-cart'),
-  backdropEl: document.querySelector('.backdrop'),
-  bodyEL: document.querySelector('body'),
-  telInputEl: document.querySelector('.tel-input'),
+  heroOrderBtn: document.querySelector('.hero-order-btn'),
+  modalCloseBtn: document.querySelector('.modal-close-btn'),
+  shoppingCartBtn: document.querySelector('.shopping-cart'),
+  backdrop: document.querySelector('.backdrop'),
+  body: document.querySelector('body'),
+  telInput: document.querySelector('.tel-input'),
 };
 
-elements.heroOrderBtnEl.addEventListener('click', orderNowOpn);
-elements.shoppingCartBtnEl.addEventListener('click', orderNowOpn);
+elements.heroOrderBtn.addEventListener('click', orderNowOpn);
+elements.shoppingCartBtn.addEventListener('click', orderNowOpn);
 
 function orderNowOpn(e) {
   window.onclick = function (event) {
-    if (event.target != elements.backdropEl) {
+    if (event.target != elements.backdrop) {
     } else {
       modalClose();
     }
   };
-  elements.bodyEL.classList.add('my-body-noscroll-class');
-  elements.heroOrderBtnEl.removeEventListener('click', orderNowOpn);
-  elements.shoppingCartBtnEl.removeEventListener('click', orderNowOpn);
-  elements.modalCloseBtnEl.addEventListener('click', modalClose);
-  elements.backdropEl.classList.remove('is-hidden');
+  elements.body.classList.add('my-body-noscroll-class');
+  elements.heroOrderBtn.removeEventListener('click', orderNowOpn);
+  elements.shoppingCartBtn.removeEventListener('click', orderNowOpn);
+  elements.modalCloseBtn.addEventListener('click', modalClose);
+  elements.backdrop.classList.remove('is-hidden');
 
-  elements.telInputEl.addEventListener('click', autofillTel);
+  elements.telInput.addEventListener('click', autofillTel);
 }
 
 function modalClose(e) {
-  elements.bodyEL.classList.remove('my-body-noscroll-class');
-  elements.modalCloseBtnEl.removeEventListener('click', modalClose);
-  elements.heroOrderBtnEl.addEventListener('click', orderNowOpn);
-  elements.shoppingCartBtnEl.addEventListener('click', orderNowOpn);
-  elements.backdropEl.classList.add('is-hidden');
+  elements.body.classList.remove('my-body-noscroll-class');
+  elements.modalCloseBtn.removeEventListener('click', modalClose);
+  elements.heroOrderBtn.addEventListener('click', orderNowOpn);
+  elements.shoppingCartBtn.addEventListener('click', orderNowOpn);
+  elements.backdrop.classList.add('is-hidden');
 }
 
 function autofillTel() {
-  if (!elements.telInputEl.value) {
-    elements.telInputEl.value = '+38';
+  if (!elements.telInput.value) {
+    elements.telInput.value = '';
   }
 }
