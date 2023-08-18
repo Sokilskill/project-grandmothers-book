@@ -20,6 +20,11 @@
   --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
 }
 
+body.dark :root {
+  --main-text-color: red;
+  --background-color: #050505;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -49,3 +54,17 @@ body {
     max-width: 1110px;
   }
 }
+
+/* Тема сайту змінюється з налаштування системи */
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--secondary-background-color, #050505);
+  }
+  :root {
+    --main-text-color: #2323233;
+  }
+} */
+
+/* html.dark body {
+  background-color: var(--secondary-background-color, #050505);
+} */
