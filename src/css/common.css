@@ -14,7 +14,7 @@
 
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
-  --default-color: #fff;
+  --default-color: #ffffff;
   --main-text-color: #9bb537;
   --background-color: #f8f8f8;
   --secondary-background-color: #161616;
@@ -38,7 +38,6 @@ body {
   max-width: 372px;
   margin: 0 auto;
   padding: 0 20px;
-  outline: 2px solid rgb(245, 205, 75);
 }
 
 @media screen and (min-width: 768px) {
