@@ -8,6 +8,7 @@
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
+@import url('./favorite-recipes.css');
 
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
@@ -20,11 +21,6 @@
   --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
 }
 
-body.dark :root {
-  --main-text-color: red;
-  --background-color: #050505;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -33,25 +29,26 @@ body.dark :root {
 
 body {
   font-family: 'Inter', sans-serif;
-  line-height: calc(18 / 16);
+  /* line-height: normal; */
   background-color: var(--background-color, #f8f8f8);
 }
 .container {
-  max-width: 366px;
+  max-width: 372px;
   margin: 0 auto;
   padding: 0 20px;
-  outline: 2px solid red;
+  outline: 2px solid rgb(245, 205, 75);
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 734px;
+    max-width: 764px;
+    padding: 0 30px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1110px;
+    max-width: calc(1080px + 60px);
   }
 }
 
@@ -67,4 +64,9 @@ body {
 
 /* html.dark body {
   background-color: var(--secondary-background-color, #050505);
+} */
+/* 
+html.dark :root {
+  --main-text-color: red;
+  --background-color: #050505;
 } */
