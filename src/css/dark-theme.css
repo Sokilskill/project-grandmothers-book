@@ -1,1 +1,6 @@
 /* dark-theme */
+.dark-theme {
+  color: var(--light-theme);
+  background-color: var(--dark-theme);
+  transition: all .3s ease;
+}

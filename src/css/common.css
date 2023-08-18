@@ -21,6 +21,8 @@
   --secondary-text-color: #050505;
   --alfa-text-color: rgba(5, 5, 5, 0.8);
   --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
+  --light-theme: #f8f8f8;
+  --dark-theme: #1c1c1c;
 }
 
 @media (prefers-reduced-motion: no-preference) {
