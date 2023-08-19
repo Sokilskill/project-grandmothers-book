@@ -24,12 +24,10 @@ const refs = {
 };
 
 getApiServer().then(r => {
-   addCategory(fillingCategories(r));
+  fillingCategories(r)
 })
 
-getAllRecipes().then(r => {
-  console.log(r);
-})
+
 
 
 
@@ -43,13 +41,24 @@ createSelect(refs.selectIngredients, 'Product');
 
 
 
-function getAllRecipes(value) {
-  return axios
-    .get(
-      `https://tasty-treats-backend.p.goit.global/api/recipes?limit=100`
-    )
-    .then(r => r.data);
-}
+// function getAllRecipes(value) {
+//   const options = {
+//     params: {
+//       category: 'Beef',
+//       page: 1,
+//       limit: 6,
+//       time: null,
+//       area: '',
+//       ingredients: '',
+//     },
+//   }
+
+//   return axios
+//     .get(
+//       `https://tasty-treats-backend.p.goit.global/api/recipes`, options
+//     )
+//     .then(r => r.data);
+// }
 
 function addCategory(all) {
   refs.category.insertAdjacentHTML('beforeend',all )
@@ -60,12 +69,13 @@ function getApiServer() {
 }
 
 function fillingCategories(categories) {
-  return categories
+  const string = categories
     .map(
       ({ name, _id }) =>
         `<li class="category-item"><button class="category-btn" data-id="${_id}">${name}</button></li>`
     )
-    .join('');
+     .join('');
+    addCategory(string);
 }
 
 function createSelect(select, placehold) {
