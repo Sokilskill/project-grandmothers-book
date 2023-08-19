@@ -10,6 +10,7 @@
 @import url('./hero.css');
 @import url('./favorite-recipes.css');
 
+
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --default-color: #fff;
