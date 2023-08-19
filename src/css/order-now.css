@@ -11,6 +11,7 @@
 
     transition: opacity var(--common-time-func),
         visibility var(--common-time-func);
+
 }
 
 .my-body-noscroll-class {
@@ -23,7 +24,7 @@
     pointer-events: none;
 }
 
-.modal {
+.modal-order-now {
     max-width: 335px;
     max-height: 582px;
     height: calc(100vh - 20px);
