@@ -23,9 +23,6 @@ const refs = {
   allCateg: document.querySelector('categories'),
 };
 
-getApiServer().then(r => {
-  fillingCategories(r)
-})
 
 
 
@@ -60,23 +57,8 @@ createSelect(refs.selectIngredients, 'Product');
 //     .then(r => r.data);
 // }
 
-function addCategory(all) {
-  refs.category.insertAdjacentHTML('beforeend',all )
-}
 
-function getApiServer() {
-  return axios.get(`${BASE_URL}categories`).then(r => r.data);
-}
 
-function fillingCategories(categories) {
-  const string = categories
-    .map(
-      ({ name, _id }) =>
-        `<li class="category-item"><button class="category-btn" data-id="${_id}">${name}</button></li>`
-    )
-     .join('');
-    addCategory(string);
-}
 
 function createSelect(select, placehold) {
   new SlimSelect({
