@@ -27,7 +27,11 @@
   --border-color: #9bb5374c;
   --card-text-color: #f8f8f899;
   --origin-text-color: #f8f8f833;
-
+  /* dark-theme */
+  --bodyback: #f8f8f8;
+  --label1: #cecdcd;
+  --ballcolor: #f8f8f8;
+  --ballcolor2: #f3f3f3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -39,7 +43,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--background-color, #f8f8f8);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .container {
   max-width: 372px;
