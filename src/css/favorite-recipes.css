@@ -9,12 +9,10 @@
 }
 
 .popular-recipe-div {
-    border: 1px solid tomato;
     width: 332px;
 }
 
 .favorite-list-img{
-    border: 1px solid tomato;
 }
 
 .popular-recipe-list {
@@ -32,7 +30,6 @@ display: flex;
 }
 
 .popular-recipe-div-list{
-    border: 1px solid tomato;
     margin-left: 16px;
     width: 250px;
     overflow: hidden; 

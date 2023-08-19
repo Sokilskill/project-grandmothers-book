@@ -4,10 +4,11 @@ fetch("https://tasty-treats-backend.p.goit.global/api/recipes/popular")
   .then(response => {
 
     if (!response.ok) {
-      throw new Error(`Ошибка запроса: ${response.status}`);
+      throw new Error(`Помилка запиту: ${response.status}`);
     }
     return response.json();
   })
+  .catch(err => console.log(err))
   .then(data => {
     const recipe = data.map((data) => {
         return `<li class="popular-recipe-list-li">
@@ -22,3 +23,4 @@ fetch("https://tasty-treats-backend.p.goit.global/api/recipes/popular")
     });
     recipe_list.insertAdjacentHTML('beforeend', recipe.join(''));
   });
+  
