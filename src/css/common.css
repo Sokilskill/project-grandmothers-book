@@ -8,11 +8,14 @@
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
+@import url('./favorite-recipes.css');
+@import url('./dark-theme.css');
+@import url('./light-theme.css');
 @import url('./order-now.css');
 
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
-  --default-color: #fff;
+  --default-color: #ffffff;
   --main-text-color: #9bb537;
   --background-color: #f8f8f8;
   --secondary-background-color: #161616;
@@ -29,25 +32,25 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  line-height: calc(18 / 16);
+  /* line-height: normal; */
   background-color: var(--background-color, #f8f8f8);
 }
 
 .container {
-  max-width: 366px;
+  max-width: 372px;
   margin: 0 auto;
   padding: 0 20px;
-  outline: 2px solid red;
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 734px;
+    max-width: 764px;
+    padding: 0 30px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1110px;
+    max-width: calc(1080px + 60px);
   }
 }
