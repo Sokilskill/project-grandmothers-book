@@ -41,8 +41,8 @@
 }
 
 
-.active-favorite-categories:hover,
-.active-favorite-categories:focus {
+.active-favorite-categories,.favorite-categories-btn:hover,
+.favorite-categories-btn:focus {
     background-color: var(--main-text-color);
     color: var(--background-color);
     border: 1px solid var(--main-text-color);
