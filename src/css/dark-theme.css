@@ -1,1 +1,42 @@
 /* dark-theme */
+.dark-theme {
+  background-color: var(--dark-theme);
+  transition: all .3s ease;
+
+  /* Header */
+
+  .nav-link-favorites {
+    color: var(--default-color);
+  }
+
+  .shopping-cart-icon {
+    stroke: var(--default-color);
+  }
+
+  /* Hero */
+
+  .hero-title {
+    color: var(--default-color);
+  }
+
+  .hero-text {
+    color: var(--default-color);
+  }
+
+  .hero-order-btn {
+    color: var(--default-color);
+  }
+
+  .hero-swipe-dot {
+    color: var(--default-color);
+  }
+
+  .hero-swipe-dot:first-child {
+    color: var(--main-text-color);
+  }
+
+  .hero-swiper {
+    color: var(--default-color);
+  }
+
+}
