@@ -144,14 +144,14 @@
 
 /* SWITCH THEME */
 
-.btn-switch-desktop {
+.switch-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 :root{
-  --bodyback :white;
+  --bodyback : #F8F8F8;
   --label1: #CECDCD;
   --ballcolor: #F8F8F8;
   --ballcolor2: #F3F3F3;
