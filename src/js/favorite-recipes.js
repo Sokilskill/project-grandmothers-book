@@ -2,7 +2,7 @@ const recipe_list = document.querySelector('.popular-recipe-list');
 
 fetch("https://tasty-treats-backend.p.goit.global/api/recipes/popular")
   .then(response => {
- 
+
     if (!response.ok) {
       throw new Error(`Ошибка запроса: ${response.status}`);
     }
