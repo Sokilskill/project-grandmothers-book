@@ -11,7 +11,6 @@
 @import url('./favorite-recipes.css');
 @import url('./dark-theme.css');
 @import url('./light-theme.css');
-@import url('./modal-recipe.css');
 @import url('../../node_modules/modern-normalize/modern-normalize.css');
 
 :root {
