@@ -53,27 +53,35 @@
 }
 
 .modal-close-btn {
+
     display: flex;
     justify-content: center;
+    width: 30px;
+    height: 30px;
     align-items: center;
-    width: 24px;
-    height: 24px;
+    border-radius: 50%;
+
 
     position: absolute;
     right: 16px;
     top: 16px;
-    border-radius: 12px;
-    fill: var(--secondary-text-color);
-    transition: background-color var(--common-time-func), fill var(--common-time-func);
+    transition: background-color var(--common-time-func);
 }
+
+
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
 
-    fill: var(--default-color);
+
     background-color: var(--main-text-color);
 }
 
+.close-icon {
+    stroke: black;
+    width: 24px;
+    height: 24px;
+}
 
 
 .modal-title {
