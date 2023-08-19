@@ -17,6 +17,8 @@
 @import url('./order-now.css');
 @import url('./favorites-card.css');
 @import url('./dark-theme.css');
+@import url('./filter.css');
+
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --default-color: #ffffff;
@@ -37,6 +39,7 @@
   --label1: #cecdcd;
   --ballcolor: #f8f8f8;
   --ballcolor2: #f3f3f3;
+  --border-color-filter: rgba(5, 5, 5, 0.20);
 }
 
 @media (prefers-reduced-motion: no-preference) {

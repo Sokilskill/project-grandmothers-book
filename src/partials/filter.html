@@ -1,0 +1,101 @@
+<div class="filtering-recipes">
+  <form class="search-form">
+    <label class="l-select">
+        <span class="input-name">Search</span>
+        <div class="thumb-input"><svg class="svg-search">
+            <use href="../img/icons.svg#icon-search"></use>
+        </svg>
+        <input
+      type="text"
+      name="search-recipe"
+      autocomplete="off"
+      placeholder="Enter Text"
+      id="search-recipe"
+    /></div>
+    </label>
+    <label class="l-select sel-time">
+        <span class="input-name">Time</span>
+        <select name="filtr-time" class="filtr filtr-time">
+            <option data-placeholder="true"></option>
+            <option value="1" id="">1</option>
+            <option value="2" id="">2</option>
+            <option value="3" id="">3</option>
+            <option value="4" id="">4</option>
+            <option value="5" id="">5</option>
+            <option value="6" id="">6</option>
+            <option value="7" id="">7</option>
+    </select>
+    </label>
+    <label  class="l-select">
+        <span class="input-name">Area</span>
+        <select name="filtr-area" class="filtr filtr-area">
+            <option data-placeholder="true"></option>
+      <!-- <option value="" id=""></option> -->
+    </select>
+    </label>
+    <label  class="l-select">
+        <span class="input-name">Ingredients</span>
+        <select name="filtr-ingredients" class="filtr filtr-ingredients">
+            <option data-placeholder="true"></option>
+      <!-- <option value="" id=""></option> -->
+    </select>
+    </label>
+    <button type="button" class="btn-reset-filtr"><svg class="svg-reset">
+            <use href="../img/icons.svg#icon-reset"></use>
+        </svg>Reset the filter</button>
+  </form>
+  <div class="all-recipe">
+    <div class="cards-recipe"></div>
+
+    <ul class="page-pagination-list">
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-beginning bc">
+          <svg class="svg-switch-duo">
+            <use href="../img/icons.svg#icon-beginning"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-previous bc">
+          <svg class="svg-switch">
+            <use href="../img/icons.svg#icon-previous"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-first act">
+1
+        </button>
+    </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-second">
+2
+        </button>
+    </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-third hidden-btn">
+3
+        </button>
+    </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-show-others">
+          ...
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-next act">
+          <svg class="svg-switch">
+            <use href="../img/icons.svg#icon-next"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-end act">
+          <svg class="svg-switch-duo">
+            <use href="../img/icons.svg#icon-end"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
