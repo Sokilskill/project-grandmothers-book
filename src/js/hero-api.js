@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-// import 'swiper/css';
+import 'swiper/css';
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/';
 const END_POINT = 'events';
@@ -19,25 +19,38 @@ const fetchEvents = async () => {
 };
 fetchEvents();
 
-// new Swiper('.swiper', {
-//   modules: [Navigation, Pagination],
-//   loop: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+new Swiper('.swiper', {
+  modules: [Navigation, Pagination],
+  allowTouchMove: true,
+  loop: true,
+  breakpointsBase: 'hero-slider',
+  onAny(eventName, ...args) {
+    console.log('Event: ', eventName);
+    console.log('Event data: ', args);
+  },
+  createElements: true,
+  autoplay: {
+    delay: 2000,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+const swiper = document.querySelector('.swiper').swiper;
+
+swiper.slideNext();
 
 function markupEvents(arr) {
   return arr
     .map(
       ({
         value: { cook, topic },
-      }) => `<div class="swiper-slide"><div class="swiper-card-cook"><img class="hero-cook-img" src="${cook.imgWebpUrl}" alt="${cook.name}"></img></div>
+      }) => `<div class="swiper-slide my-slide" style="display: flex;"><div class="swiper-card-cook"><img class="hero-cook-img" src="${cook.imgWebpUrl}" alt="${cook.name}"></img></div>
             <div class="swiper-card-prev"><img class="hero-previev-img" src="${topic.previewWebpUrl}" alt="${topic.name}"></img><p class="swiper-dich-text">${topic.name}</p>
         <p class="swiper-origin-text">${topic.area}</p></div>
             <div class="swiper-card-viev"><img class="hero-viev-img" src="${topic.imgWebpUrl}" alt="${topic.name}"></img></div></div>`

@@ -11,7 +11,6 @@
   flex-direction: column;
   gap: 48px;
   outline: 1px solid crimson;
-  overflow-x: visible;
 }
 .hero-info {
 }
@@ -57,16 +56,20 @@
 }
 
 .swiper {
-  width: 900px;
-  height: 900px;
+  display: flex;
+  width: 518px;
+  padding-left: 20px;
+  height: 280px;
 }
 .swiper-wrapper {
+  display: flex;
+  /* height: 280px; */
 }
-.swiper-slide {
+.my-slide {
   display: flex;
   gap: 8px;
   width: 518px;
-  height: 280px;
+  /* height: 280px; */
   /* margin-right: -169px; */
 }
 .swiper-card-cook {
@@ -76,6 +79,10 @@
   border: 1px solid #9bb5374c;
 }
 .swiper-card-prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 200px;
   padding: 56px 22px 14px;
   border-radius: 15px;
@@ -92,7 +99,7 @@
   overflow: hidden;
   border: 1px solid #9bb5374c;
   background-color: var(--secondary-text-color, #050505);
-  margin-right: -163px;
+  /* margin-right: -163px; */
 }
 .hero-cook-img {
   width: 100%;
@@ -135,7 +142,6 @@
   margin: 4px auto;
 } */
 .hero-swipe-dot {
-  color: var(--secondary-text-color, #050505);
   text-align: center;
   font-family: 'Poppins';
   font-size: 25px;
@@ -174,6 +180,10 @@
   }
   .hero-slider {
     margin-right: -291px;
+  }
+  .swiper {
+    width: 871px;
+    height: 442px;
   }
   .swiper-slide {
     gap: 16px;
