@@ -22,7 +22,7 @@
 
 }
 
-.active-all-categories,.all-categories-btn:focus,
+.all-categories-btn:focus,
 .all-categories-btn:hover {
     background-color: var(--main-text-color);
     color: var(--background-color);
@@ -63,6 +63,7 @@
 }
 
 .categories-list::-webkit-scrollbar {
+    width: 8px;
     background-color:var(--background-color);
 }
 

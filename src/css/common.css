@@ -18,7 +18,6 @@
 @import url('./favorites-card.css');
 @import url('./dark-theme.css');
 @import url('./filter.css');
-
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --default-color: #ffffff;
