@@ -4,20 +4,18 @@
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="./index.html" class="nav-link nav-link-home">Home</a>
+            <a href="./index.html" class="nav-link-home">Home</a>
           </li>
-          <li>
-            <a href="./favorites.html" class="nav-link nav-link-favorites"
-              >Favorites</a
-            >
+          <li class="nav-item">
+            <a href="./favorites.html" class="nav-link-favorites">Favorites</a>
           </li>
         </ul>
 
         <a href="./index.html" class="link logo-link">
           <img
             src="./img/header/logo.svg"
-            alt="logo-mobile tasty treats"
             class="logo-img"
+            alt="logo-img tasty treats"
             width="83"
             height="18"
         /></a>
@@ -26,16 +24,21 @@
       <div class="button-wrap">
         <!-- shopping cart  -->
         <button type="button" class="shopping-cart">
-          <svg class="" width="24" height="24">
+          <svg class="shopping-cart-icon" width="24" height="24">
             <use href="./img/icons.svg#icon-shopping-cart"></use>
           </svg>
         </button>
 
-        <button class="btn-switch btn-switch-desktop">
-          <svg class="switch-light" width="46" height="20">
+        <!-- <button class="btn-switch btn-switch-desktop">
+          <svg class="switch-light-icon" width="46" height="20">
             <use href="./img/icons.svg#icon-switch"></use>
           </svg>
-        </button>
+        </button> -->
+
+        <div class="switch-wrap btn-switch-desktop">
+          <input type="checkbox" id="check" />
+          <label for="check" class="btn-switch"></label>
+        </div>
 
         <!-- Burger -->
         <!-- button burger-menu -->
@@ -45,43 +48,51 @@
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
-          ===
-          <!-- <svg class="btn-open-menu-icon" width="24" height="24">
-            <use href=""></use>
-          </svg> -->
+          <svg class="btn-open-menu-icon" width="24" height="24">
+            <use href="./img/icons.svg#icon-burger-menu"></use>
+          </svg>
         </button>
       </div>
     </div>
+
     <!-- MOB-MENU -->
 
-    <!-- <div class="mob-menu js-mob-menu" id="mobile-menu">
+    <div class="mob-menu js-mob-menu" id="mobile-menu">
       <button type="button" class="button-close js-close-menu">
-        <svg class="close-icon" width="24" height="24">
+        <svg class="close-icon" width="32" height="32">
           <use href="./img/icons.svg#icon-button-close"></use>
         </svg>
-      </button> -->
+      </button>
 
     <!-- mobile menu navigation -->
-    <!-- <nav class="mob-page-nav">
+    <nav class="mob-page-nav">
         <ul class="mob-nav-list">
           <li class="mob-nav-item">
-            <a class="nav-link nav-link-home" href="./">Home</a>
+            <a class="mob-nav-link-home nav-link-home" href="./">Home</a>
           </li>
 
           <li class="mob-nav-item">
-            <a class="nav-link nav-link-favorites" href="./favorites.html"
+            <a
+              class="mob-nav-link-favorites nav-link-favorites"
+              href="./favorites.html"
               >Favorites</a
             >
           </li>
         </ul>
-      </nav> -->
+      </nav> 
 
     <!-- switch -->
+
     <!-- <button class="btn-switch">
-        <svg class="switch-light" width="46" height="20">
+        <svg class="switch-light-icon" width="46" height="20">
           <use href="./img/icons.svg#icon-switch"></use>
         </svg>
-      </button>
+      </button> -->
+
+    <!-- <div class="switch-wrap">
+        <input type="checkbox" id="check" />
+        <label for="check" class="btn-switch"></label>
+      </div>
     </div> -->
   </div>
 </header>
