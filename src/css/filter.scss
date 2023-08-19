@@ -19,6 +19,11 @@
 }
 .page-pagination-list {
   display: flex;
+  justify-content: center;
+}
+.page-pagination-list button{
+  margin: 0;
+  padding: 0;
 }
 .svg-switch {
   width: 24px;
@@ -177,12 +182,10 @@
 }
 
 .btn-list {
-  width: 44px;
-  height: 44px;
+  position: relative;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid rgba(5, 5, 5, 0.30);
   color: #050505;
 font-family: Inter;
@@ -191,14 +194,17 @@ font-style: normal;
 font-weight: 600;
 line-height: 1.22; /* 122.222% */
 }
-.svg-switch{
+.svg-switch,
+.svg-switch-duo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
 }
-
 .svg-switch-duo{
     width: 26px;
-    height: 20px;
 }
 .btn-list.bc{
     background-color: var(--secondary-text-color);
