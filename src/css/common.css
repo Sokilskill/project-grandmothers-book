@@ -22,9 +22,12 @@
   --secondary-text-color: #050505;
   --alfa-text-color: rgba(5, 5, 5, 0.8);
   --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
+  --light-theme: #f8f8f8;
+  --dark-theme: #1c1c1c;
   --border-color: #9bb5374c;
   --card-text-color: #f8f8f899;
   --origin-text-color: #f8f8f833;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,6 +39,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--background-color, #f8f8f8);
+  transition: all .3s ease;
 }
 .container {
   max-width: 372px;
