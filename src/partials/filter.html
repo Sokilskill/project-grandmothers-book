@@ -1,51 +1,93 @@
 <div class="filtering-recipes">
   <form class="search-form">
     <label class="l-select">
-        <span class="input-name">Search</span>
-        <div class="thumb-input"><svg class="svg-search">
-            <use href="../img/icons.svg#icon-search"></use>
+      <span class="input-name">Search</span>
+      <div class="thumb-input">
+        <svg class="svg-search">
+          <use href="../img/icons.svg#icon-search"></use>
         </svg>
         <input
-      type="text"
-      name="search-recipe"
-      autocomplete="off"
-      placeholder="Enter Text"
-      id="search-recipe"
-    /></div>
+          type="text"
+          name="search-recipe"
+          autocomplete="off"
+          placeholder="Enter Text"
+          id="search-recipe"
+        />
+      </div>
     </label>
     <label class="l-select sel-time">
-        <span class="input-name">Time</span>
-        <select name="filtr-time" class="filtr filtr-time">
-            <option data-placeholder="true"></option>
-            <option value="1" id="">1</option>
-            <option value="2" id="">2</option>
-            <option value="3" id="">3</option>
-            <option value="4" id="">4</option>
-            <option value="5" id="">5</option>
-            <option value="6" id="">6</option>
-            <option value="7" id="">7</option>
-    </select>
+      <span class="input-name">Time</span>
+      <select name="filtr-time" class="filtr filtr-time">
+        <option data-placeholder="true"></option>
+        <option value="1" id="">1</option>
+        <option value="2" id="">2</option>
+        <option value="3" id="">3</option>
+        <option value="4" id="">4</option>
+        <option value="5" id="">5</option>
+        <option value="6" id="">6</option>
+        <option value="7" id="">7</option>
+      </select>
     </label>
-    <label  class="l-select">
-        <span class="input-name">Area</span>
-        <select name="filtr-area" class="filtr filtr-area">
-            <option data-placeholder="true"></option>
-      <!-- <option value="" id=""></option> -->
-    </select>
+    <label class="l-select">
+      <span class="input-name">Area</span>
+      <select name="filtr-area" class="filtr filtr-area">
+        <option data-placeholder="true"></option>
+        <!-- <option value="" id=""></option> -->
+      </select>
     </label>
-    <label  class="l-select">
-        <span class="input-name">Ingredients</span>
-        <select name="filtr-ingredients" class="filtr filtr-ingredients">
-            <option data-placeholder="true"></option>
-      <!-- <option value="" id=""></option> -->
-    </select>
+    <label class="l-select">
+      <span class="input-name">Ingredients</span>
+      <select name="filtr-ingredients" class="filtr filtr-ingredients">
+        <option data-placeholder="true"></option>
+        <!-- <option value="" id=""></option> -->
+      </select>
     </label>
-    <button type="button" class="btn-reset-filtr"><svg class="svg-reset">
-            <use href="../img/icons.svg#icon-reset"></use>
-        </svg>Reset the filter</button>
+    <button type="button" class="btn-reset-filtr">
+      <svg class="svg-reset">
+        <use href="../img/icons.svg#icon-reset"></use>
+        </svg>Reset the filter
+    </button>
   </form>
   <div class="all-recipe">
-    <div class="cards-recipe"></div>
+    <div class="cards-recipe">
+
+
+      <div class="photo-recipe-card" style="background-image: url(https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg); background-repeat: no-repeat; background-size:contain;">
+        <button class="fav-btn">
+          <svg class="fav-icon">
+            <use href="../img/icons.svg#icon-heart"></use>
+          </svg>
+        </button>
+
+        <div class="info-recipe-card" >
+          <h2 class="title-recipe-card">
+            title
+          </h2>
+          <p class="descr-recipe-card">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eaque qui ex unde voluptatum odio temporibus consequatur id aliquid ad?
+          </p>
+          <div class="thum-raying-card">
+            <div class="rating-recipe-card">
+            <span class="rating-value">4.5</span>
+            <svg class="rat-icon">
+            <use href="../img/icons.svg#icon-Star"></use>
+          </svg><svg class="rat-icon">
+            <use href="../img/icons.svg#icon-Star"></use>
+          </svg><svg class="rat-icon">
+            <use href="../img/icons.svg#icon-Star"></use>
+          </svg><svg class="rat-icon">
+            <use href="../img/icons.svg#icon-Star"></use>
+          </svg><svg class="rat-icon">
+            <use href="../img/icons.svg#icon-Star"></use>
+          </svg>
+          </div>
+          <button class="see-recipe-card">See recipe</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
 
     <ul class="page-pagination-list">
       <li class="page-pagination-item">
@@ -63,24 +105,16 @@
         </button>
       </li>
       <li class="page-pagination-item">
-        <button type="button" class="btn-list btn-first act">
-1
-        </button>
-    </li>
+        <button type="button" class="btn-list btn-first act">1</button>
+      </li>
       <li class="page-pagination-item">
-        <button type="button" class="btn-list btn-second">
-2
-        </button>
-    </li>
+        <button type="button" class="btn-list btn-second">2</button>
+      </li>
       <li class="page-pagination-item">
-        <button type="button" class="btn-list btn-third hidden-btn">
-3
-        </button>
-    </li>
+        <button type="button" class="btn-list btn-third hidden-btn">3</button>
+      </li>
       <li class="page-pagination-item">
-        <button type="button" class="btn-list btn-show-others">
-          ...
-        </button>
+        <button type="button" class="btn-list btn-show-others">...</button>
       </li>
       <li class="page-pagination-item">
         <button type="button" class="btn-list btn-next act">

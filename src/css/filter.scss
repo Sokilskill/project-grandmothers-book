@@ -47,6 +47,7 @@
   width: 335px;
   margin: 0 auto;
 //   height: 255px;
+margin-bottom: 20px;
 }
 #search-recipe {
   border: 1px solid var(--border-color);
@@ -180,7 +181,9 @@
     height: 16px;
     margin-right: 4px;
 }
-
+.cards-recipe{
+  margin-bottom: 40px;
+}
 .btn-list {
   position: relative;
   width: 40px;
@@ -235,6 +238,89 @@ line-height: 1.22; /* 122.222% */
     margin-right: 4px;
 }
 
+.photo-recipe-card{
+  position: relative;
+  width: 335px;
+  height: 335px;
+  background-color: #404822;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.title-recipe-card{
+color: var(--background-color);
+font-size: 14px;
+line-height: 1.28; /* 128.571% */
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+.descr-recipe-card{
+color: var(--background-color);
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.33; /* 133.333% */
+margin-bottom: 16px;
+}
+.rating-value{
+  color: var(--background-color);
+  font-size: 14px;
+  line-height: 1.28; /* 128.571% */
+  margin-right: 4px;
+}
+.rat-icon{
+  width: 18px;
+  height: 18px;
+  fill: rgba(248, 248, 248, 0.50);
+}
+.all-recipe{
+  padding-bottom: 80px;
+}
+.rating-recipe-card{
+  display: flex;
+}
+.thum-raying-card{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.see-recipe-card{
+  color: var(--background-color);
+  font-size: 12px;
+  line-height: normal;
+  padding: 8px 14px;
+  background-color: var(--main-text-color);
+  border-radius: 8px;
+}
+.fav-btn{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+  background-color: rgba(248, 248, 248, 0.00);
+}
+
+.fav-icon{
+  width: 20px;
+  height: 20px;
+  fill: rgba(248, 248, 248, 0.50);
+}
+.fav-btn:hover .fav-icon,
+.fav-btn:focus .fav-icon{
+  fill: var(--background-color);
+}
+.see-recipe-card:hover,
+.see-recipe-card:focus{
+  background-color: #839730;
+}
 
 
 

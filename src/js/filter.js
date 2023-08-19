@@ -25,7 +25,6 @@ new SlimSelect({
     placeholderText: '0 min',
     showSearch: false,
     searchHighlight: true,
-    searchText: 'No results found',
   },
 });
 
