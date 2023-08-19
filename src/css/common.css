@@ -11,6 +11,7 @@
 @import url('./favorite-recipes.css');
 @import url('./dark-theme.css');
 @import url('./light-theme.css');
+@import url('../../node_modules/modern-normalize/modern-normalize.css');
 @import url('./order-now.css');
 
 :root {
@@ -22,6 +23,16 @@
   --secondary-text-color: #050505;
   --alfa-text-color: rgba(5, 5, 5, 0.8);
   --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
+  --light-theme: #f8f8f8;
+  --dark-theme: #1c1c1c;
+  --border-color: #9bb5374c;
+  --card-text-color: #f8f8f899;
+  --origin-text-color: #f8f8f833;
+  /* dark-theme */
+  --bodyback: #f8f8f8;
+  --label1: #cecdcd;
+  --ballcolor: #f8f8f8;
+  --ballcolor2: #f3f3f3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,8 +43,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  /* line-height: normal; */
   background-color: var(--background-color, #f8f8f8);
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -54,3 +65,22 @@ body {
     max-width: calc(1080px + 60px);
   }
 }
+
+/* Тема сайту змінюється з налаштування системи */
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--secondary-background-color, #050505);
+  }
+  :root {
+    --main-text-color: #2323233;
+  }
+} */
+
+/* html.dark body {
+  background-color: var(--secondary-background-color, #050505);
+} */
+/* 
+html.dark :root {
+  --main-text-color: red;
+  --background-color: #050505;
+} */
