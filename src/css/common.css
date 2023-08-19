@@ -11,6 +11,7 @@
 @import url('./favorite-recipes.css');
 @import url('./dark-theme.css');
 @import url('./light-theme.css');
+@import url('../../node_modules/modern-normalize/modern-normalize.css');
 
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,6 +22,9 @@
   --secondary-text-color: #050505;
   --alfa-text-color: rgba(5, 5, 5, 0.8);
   --secondary-alfa-text-color: rgba(5, 5, 5, 0.5);
+  --border-color: #9bb5374c;
+  --card-text-color: #f8f8f899;
+  --origin-text-color: #f8f8f833;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,7 +35,6 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  /* line-height: normal; */
   background-color: var(--background-color, #f8f8f8);
 }
 .container {
@@ -66,8 +69,8 @@ body {
 /* html.dark body {
   background-color: var(--secondary-background-color, #050505);
 } */
-/* 
-html.dark :root {
+
+/* html.dark {
   --main-text-color: red;
   --background-color: #050505;
 } */
