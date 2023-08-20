@@ -50,7 +50,7 @@
 }
 
 .hero-slider {
-  margin-right: -169px;
+  margin-right: -163px;
 }
 .swiper {
   display: flex;
@@ -171,6 +171,7 @@
     border-radius: 15px;
   }
   .hero-slider {
+    width: 871px;
     margin-right: -291px;
   }
   .swiper {
