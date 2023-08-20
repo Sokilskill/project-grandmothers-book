@@ -5,18 +5,31 @@ const categoryFavorites = document.querySelector('.favorite-categories-list');
 const categorySelect = document.querySelector('.category-select');
 
 async function fetchCategories() {
-  return axios.get('https://tasty-treats-backend.p.goit.global/api/categories');
+  const response = await axios.get(
+    'https://tasty-treats-backend.p.goit.global/api/categories'
+  );
+  return await response.data;
 }
-const categories = fetchCategories().data;
 
 // await без async неможе бути
 // const categories = (await fetchCategories()).data;
 
-if (categoryHome) {
-  renderCategoriesHome(categories);
-} else if (categoryFavorites) {
-  renderCategoriesFavorites(categories);
-}
+const categories = fetchCategories()
+  .then(data => {
+    console.log('data: ', data);
+
+    if (categoryHome) {
+      renderCategoriesHome(data);
+    } else if (categoryFavorites) {
+      renderCategoriesFavorites(data);
+    }
+    // return data;
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// console.log(categories);
 
 document.querySelectorAll('.category-btn').forEach(el => {
   el.addEventListener('click', evt => {
@@ -71,6 +84,8 @@ document.querySelectorAll('.favorite-categories-btn').forEach(el => {
 // })
 
 function renderCategoriesHome(categories) {
+  console.log(categories, categorySelect.value);
+
   categories.forEach(category => {
     const htmlButton = `
         <li class="category-item"><button data-value="${category._id}" class="category-btn">${category.name}</button></li>
