@@ -34,9 +34,9 @@ new Swiper('.swiper', {
     clickable: true,
   },
 });
-const swiper = document.querySelector('.swiper').swiper;
+const swiper = document.querySelector('.swiper');
 
-swiper.slideNext();
+// swiper.slideNext();
 
 function markupEvents(arr) {
   return arr
