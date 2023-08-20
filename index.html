@@ -13,8 +13,8 @@
 
     <title>Tasty Treats</title>
     
-    <script type="module" crossorigin src="/project-grandmothers-book/assets/main-e572af0c.js"></script>
-    <link rel="stylesheet" href="/project-grandmothers-book/assets/main-2eb88ff7.css">
+    <script type="module" crossorigin src="/project-grandmothers-book/assets/main-4eb672a0.js"></script>
+    <link rel="stylesheet" href="/project-grandmothers-book/assets/main-0f3cbac0.css">
   </head>
   <body class="light-theme">
     <!-- Sergii Sokolovskyi -->
@@ -115,7 +115,7 @@
 
     <!-- Pavlo Lystopad -->
     <section class="hero">
-  <container class="hero-container">
+  <div class="hero-container">
     <div class="hero-info">
       <h1 class="hero-title">
         Learn to Cook
@@ -126,21 +126,25 @@
         TastyTreats - Customize Your Meal with Ingredient Options and
         Step-by-Step Video Guides.
       </p>
-      <button class="hero-order-btn" type="button">Order now</button>
+      <button class="hero-order-btn js-order-now" type="button">
+        Order now
+      </button>
     </div>
-    <div class="hero-swipe-thumb">
-      <swiper-container class="hero-swiper">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-      </swiper-container>
-      <div class="hero-swipe-dots">
-        <p class="hero-swipe-dot">.</p>
-        <p class="hero-swipe-dot">.</p>
-        <p class="hero-swipe-dot">.</p>
+    <div class="hero-slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide">3</div>
+        </div>
+        <div class="swiper-pagination">
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+        </div>
       </div>
     </div>
-  </container>
+  </div>
 </section>
 
 
