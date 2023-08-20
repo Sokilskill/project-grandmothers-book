@@ -19,6 +19,16 @@ function orderNowOpn(e) {
       modalClose();
     }
   };
+
+  if (localStorage.getItem('orderNowData')) {
+    const savedData = localStorage.getItem('orderNowData');
+    const parsedData = JSON.parse(savedData);
+    elements.form[0].value = parsedData.Name;
+    elements.form[1].value = parsedData.Tell;
+    elements.form[2].value = parsedData.Email;
+    elements.form[3].value = parsedData.Comment;
+  }
+
   elements.body.classList.add('my-body-noscroll-class');
   elements.heroOrderBtn.removeEventListener('click', orderNowOpn);
   elements.shoppingCartBtn.removeEventListener('click', orderNowOpn);
@@ -35,11 +45,11 @@ function modalClose(e) {
 
   const data = {
     Name: elements.form[0].value,
-    Email: elements.form[1].value,
-    Tell: elements.form[2].value,
+    Email: elements.form[2].value,
+    Tell: elements.form[1].value,
     Comment: elements.form[3].value,
   };
-  console.log(data);
+  localStorage.setItem('orderNowData', JSON.stringify(data));
 }
 
 function post(e) {
@@ -52,7 +62,7 @@ function post(e) {
   };
 
   addFetch(data);
-
+  localStorage.removeItem('orderNowData', JSON.stringify(data));
   elements.form.reset();
 }
 
