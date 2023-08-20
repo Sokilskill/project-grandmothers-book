@@ -119,9 +119,7 @@ margin-bottom: 20px;
   color: var(--secondary-text-color);
   line-height: 1.28; /* 128.571% */
 }
-.ss-main .ss-values .ss-placeholder {
-    padding: 0;
-}
+
 .ss-content .ss-list .ss-option {
   color: rgba(5, 5, 5, 0.3);
   font-family: Inter;
@@ -249,7 +247,9 @@ line-height: 1.22; /* 122.222% */
   flex-direction: column;
   justify-content: flex-end;
 }
-
+.photo-recipe-card:not(:last-child){
+  margin-bottom: 24px;
+}
 .title-recipe-card{
 color: var(--background-color);
 font-size: 14px;
@@ -275,6 +275,9 @@ margin-bottom: 16px;
   width: 18px;
   height: 18px;
   fill: rgba(248, 248, 248, 0.50);
+}
+.rat-icon.act{
+  fill:#EEA10C;
 }
 .all-recipe{
   padding-bottom: 80px;

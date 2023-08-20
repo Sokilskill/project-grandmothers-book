@@ -1,15 +1,23 @@
 export default class Pagination {
   constructor() {
     this.request = '';
-    this.time = 0;
+    this.start = 0;
+    this.end = 6;
+    this.time = null;
     this.area = '';
     this.ingredient = '';
     this.page = 1;
-    this.limit = 6;
+    this.limit = 400;
     this.category = ''; 
-    this.baseUrl = 'https://tasty-treats-backend.p.goit.global/api/';
+    this.recipe = [];
   }
 
+  newRecipesList(mass) {
+    this.recipe.push(...mass)
+  }
+  allrecipeMas() {
+    return this.recipe
+  }
   get req() {
     return this.request;
   }
@@ -32,14 +40,14 @@ export default class Pagination {
   }
 
   get ingredients() {
-    return this.time;
+    return this.ingredient;
   }
   set ingredients(newIngredient) {
     this.ingredient = newIngredient;
   }
 
   get pages() {
-    return this.request;
+    return this.page;
   }
   set pages(newPage) {
     this.page = newPage;
