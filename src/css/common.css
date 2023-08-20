@@ -4,7 +4,7 @@
   | default @import url()
   |============================
 */
-
+@import url('../../node_modules/modern-normalize/modern-normalize.css');
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
@@ -14,7 +14,7 @@
 @import url('./dark-theme.css');
 @import url('./light-theme.css');
 @import url('./modal-recipe.css');
-@import url('../../node_modules/modern-normalize/modern-normalize.css');
+@import url('./favorites-card.css');
 
 :root {
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
