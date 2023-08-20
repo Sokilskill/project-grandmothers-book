@@ -11,7 +11,7 @@
 
     transition: opacity var(--common-time-func),
         visibility var(--common-time-func);
-
+    z-index: 9999;
 }
 
 .my-body-noscroll-class {
