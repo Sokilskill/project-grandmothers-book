@@ -54,29 +54,24 @@
 .hero-slider {
   margin-right: -169px;
 }
-
 .swiper {
   display: flex;
   width: 518px;
-  padding-left: 20px;
+  margin-left: 0;
   height: 280px;
 }
 .swiper-wrapper {
-  display: flex;
-  /* height: 280px; */
 }
 .my-slide {
   display: flex;
   gap: 8px;
   width: 518px;
-  /* height: 280px; */
-  /* margin-right: -169px; */
 }
 .swiper-card-cook {
   max-width: 80px;
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid #9bb5374c;
+  border: 1px solid var(--border-color) #9bb5374c;
 }
 .swiper-card-prev {
   display: flex;
@@ -87,7 +82,7 @@
   padding: 56px 22px 14px;
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid #9bb5374c;
+  border: 1px solid var(--border-color) #9bb5374c;
   background-color: var(--secondary-text-color, #050505);
 }
 .swiper-card-viev {
@@ -97,9 +92,8 @@
   max-width: 222px;
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid #9bb5374c;
+  border: 1px solid var(--border-color) #9bb5374c;
   background-color: var(--secondary-text-color, #050505);
-  /* margin-right: -163px; */
 }
 .hero-cook-img {
   width: 100%;
@@ -122,7 +116,7 @@
 }
 .swiper-dich-text {
   width: 157px;
-  color: #f8f8f899;
+  color: var(--card-text-color) #f8f8f899;
   text-align: center;
   font-size: 10px;
   font-weight: 500;
@@ -131,17 +125,18 @@
   margin-bottom: 8px;
 }
 .swiper-origin-text {
-  color: #f8f8f833;
+  color: var(--origin-text-color) #f8f8f833;
   text-align: center;
   font-size: 8px;
   line-height: calc(12 / 8);
 }
-/* .swiper-pagination {
+.swiper-pagination {
+  color: black;
   display: flex;
   max-width: fit-content;
   margin: 4px auto;
-} */
-.hero-swipe-dot {
+}
+.swiper-pagination-bullet {
   text-align: center;
   font-family: 'Poppins';
   font-size: 25px;
@@ -149,14 +144,13 @@
   line-height: calc(18 / 25);
   letter-spacing: 2px;
 }
-.hero-swipe-dot:first-child {
+/* .hero-swipe-dot:first-child {
   color: var(--main-text-color, #9bb537);
-}
+} */
 
 @media screen and (min-width: 768px) {
   .hero-container {
     max-width: 734px;
-    /* padding: 0 32px; */
   }
   .hero-info {
     width: 446px;
@@ -185,11 +179,9 @@
     width: 871px;
     height: 442px;
   }
-  .swiper-slide {
+  .my-slide {
     gap: 16px;
-    width: 871px;
     height: 442px;
-    /* margin-right: -291px; */
   }
   .swiper-card-cook {
     max-width: 137px;
@@ -219,8 +211,6 @@
     line-height: calc(18 / 14);
   }
   .swiper-origin-text {
-    color: #f8f8f833;
-    text-align: center;
     font-size: 12px;
     line-height: calc(14 / 12);
   }
@@ -233,7 +223,6 @@
   .hero-container {
     max-width: 1110px;
     margin-top: 64px;
-    /* padding: 0 50px; */
     flex-direction: row;
     gap: 32px;
   }

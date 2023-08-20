@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/';
@@ -20,25 +20,18 @@ const fetchEvents = async () => {
 fetchEvents();
 
 new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
+  modules: [Pagination],
   allowTouchMove: true,
   loop: true,
   breakpointsBase: 'hero-slider',
-  onAny(eventName, ...args) {
-    console.log('Event: ', eventName);
-    console.log('Event data: ', args);
-  },
+  // onAny(eventName, ...args) {
+  //   console.log('Event: ', eventName);
+  //   console.log('Event data: ', args);
+  // },
   createElements: true,
-  autoplay: {
-    delay: 2000,
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
 });
 const swiper = document.querySelector('.swiper').swiper;
