@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', async function () {
           player.stopVideo();
         }
         modalContainer.style.display = 'none';
-        localStorage.removeItem('currentVideoId');
       }
 
       function generateRatingStars(rating) {
