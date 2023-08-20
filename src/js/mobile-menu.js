@@ -6,12 +6,10 @@ burgerBtnEl.addEventListener('click', handlerBurgerBtn);
 
 function handlerBurgerBtn(evt) {
   mobileMenuEl.classList.toggle('is-open');
-  console.log('ok its working');
 }
 
 closeBtnEl.addEventListener('click', handlerCloseBtn);
 
 function handlerCloseBtn(evt) {
-  console.log('ok its not working');
   mobileMenuEl.classList.toggle('is-open');
 }
