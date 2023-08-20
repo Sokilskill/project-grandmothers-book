@@ -16,7 +16,6 @@
 }
 .hero-title {
   color: var(--secondary-text-color, #050505);
-  font-family: 'Inter', sans-serif;
   font-size: 26px;
   font-weight: 600;
   line-height: calc(31.2 / 26);
@@ -36,7 +35,6 @@
 }
 .hero-order-btn {
   color: var(--secondary-text-color, #050505);
-  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
   padding: 10px 20px;
