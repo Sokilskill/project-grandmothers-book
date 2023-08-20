@@ -1,5 +1,5 @@
 <section class="hero">
-  <container class="hero-container">
+  <div class="hero-container">
     <div class="hero-info">
       <h1 class="hero-title">
         Learn to Cook
@@ -10,19 +10,23 @@
         TastyTreats - Customize Your Meal with Ingredient Options and
         Step-by-Step Video Guides.
       </p>
-      <button class="hero-order-btn" type="button">Order now</button>
+      <button class="hero-order-btn js-order-now" type="button">
+        Order now
+      </button>
     </div>
-    <div class="hero-swipe-thumb">
-      <swiper-container class="hero-swiper">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-      </swiper-container>
-      <div class="hero-swipe-dots">
-        <p class="hero-swipe-dot">.</p>
-        <p class="hero-swipe-dot">.</p>
-        <p class="hero-swipe-dot">.</p>
+    <div class="hero-slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide">3</div>
+        </div>
+        <div class="swiper-pagination">
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+          <span class="swiper-pagination-bullet"></span>
+        </div>
       </div>
     </div>
-  </container>
+  </div>
 </section>
