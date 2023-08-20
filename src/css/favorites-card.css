@@ -5,31 +5,14 @@
 .favorites-card-img{
     border-radius: 15px;
 }
-.favorites-card-img-tabl{
-    display: none;
-}
-.favorites-card-img-desktop{
-    display: none;
-}
+
+
 @media screen and (min-width: 768px) {
     .favorites-card{
         display: block;
     }
-    .favorites-card-img-mob{
-        display: none;
-    }
-    .favorites-card-img-tabl{
-        display: block;
-    }
 }
-@media screen and (min-width: 1280px) {
-    .favorites-card-img-tabl{
-        display: none;
-    }
-    .favorites-card-img-desktop{
-        display: block;
-    }
-}
+
 
 
 .no-one {
