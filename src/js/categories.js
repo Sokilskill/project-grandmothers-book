@@ -70,7 +70,6 @@ function renderCategoriesHome(categories) {
 
 
 function renderCategoriesFavorites(categories) {
-    console.log(categories,categorySelect.value)
     categories.forEach(category => {
         const htmlButton = `
         <li class="favorite-category-item"><button data-value="${category._id}" class="favorite-categories-btn">${category.name}</button></li>

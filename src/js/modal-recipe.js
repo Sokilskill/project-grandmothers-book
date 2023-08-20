@@ -2,7 +2,7 @@ const openModalBtn = document.querySelector('.hero-order-btn');
 const modalContainer = document.getElementById('modalContainer');
 let player;
 
-openModalBtn.addEventListener('click', async function () {
+openModalBtn?.addEentListener('click', async function () {
     try {
         const recipeID = '6462a8f74c3d0ddd288980d4';
         const response = await fetch(`https://tasty-treats-backend.p.goit.global/api/recipes/${recipeID}`);

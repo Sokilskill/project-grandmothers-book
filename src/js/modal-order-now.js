@@ -10,7 +10,7 @@ const elements = {
   telInput: document.querySelector('.tel-input'),
 };
 
-elements.heroOrderBtn.addEventListener('click', orderNowOpn);
+elements.heroOrderBtn?.addEventListener('click', orderNowOpn);
 elements.shoppingCartBtn.addEventListener('click', orderNowOpn);
 
 function orderNowOpn(e) {
@@ -30,7 +30,7 @@ function orderNowOpn(e) {
   }
 
   elements.body.classList.add('my-body-noscroll-class');
-  elements.heroOrderBtn.removeEventListener('click', orderNowOpn);
+  elements.heroOrderBtn?.removeEventListener('click', orderNowOpn);
   elements.shoppingCartBtn.removeEventListener('click', orderNowOpn);
   elements.modalCloseBtn.addEventListener('click', modalClose);
   elements.backdrop.classList.remove('is-hidden');
@@ -39,7 +39,7 @@ function orderNowOpn(e) {
 function modalClose(e) {
   elements.body.classList.remove('my-body-noscroll-class');
   elements.modalCloseBtn.removeEventListener('click', modalClose);
-  elements.heroOrderBtn.addEventListener('click', orderNowOpn);
+  elements.heroOrderBtn?.addEventListener('click', orderNowOpn);
   elements.shoppingCartBtn.addEventListener('click', orderNowOpn);
   elements.backdrop.classList.add('is-hidden');
 
@@ -66,4 +66,4 @@ function post(e) {
   elements.form.reset();
 }
 
-elements.form.addEventListener('submit', post);
+elements.form?.addEventListener('submit', post);
