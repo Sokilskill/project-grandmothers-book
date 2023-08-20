@@ -1,8 +1,13 @@
 <div class="favorites-card">
     <div class="container">
-        <img src="../img/favorites/card-mob.jpg" class="favorites-card-img favorites-card-img-mob" alt="card" width="335px" height="516px">
+        <!-- <img src="../img/favorites/card-mob.jpg" class="favorites-card-img favorites-card-img-mob" alt="card" width="335px" height="516px">
         <img src="../img/favorites/card-tabl.jpg" class="favorites-card-img favorites-card-img-tabl" alt="card" width="704px" height="356px">
-        <img src="../img/favorites/card.jpg" class="favorites-card-img favorites-card-img-desktop" alt="card" width="1080px" height="356px">
+        <img src="../img/favorites/card.jpg" class="favorites-card-img favorites-card-img-desktop" alt="card" width="1080px" height="356px"> -->
+        <picture>
+            <source media="(min-width:1280px)" srcset="../img/favorites/card.jpg">
+            <source media="(min-width:768px)" srcset="../img/favorites/card-tabl.jpg">
+            <img src="../img/favorites/card.jpg" alt="card" style="width:auto;">
+        </picture>
     </div>
 </div>
 

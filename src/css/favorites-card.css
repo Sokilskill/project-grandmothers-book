@@ -47,7 +47,7 @@
 .no-one-text {
     font-size: 14px;
     font-weight: 400;
-    line-height: 129%;
+    line-height: 1.29;
     text-align: center;
     color: var(--secondary-text-color);
     max-width: 335px;
@@ -68,6 +68,6 @@
 .no-one-text {
     max-width: 481px;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
 }
 }
