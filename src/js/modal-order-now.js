@@ -15,8 +15,7 @@ elements.shoppingCartBtn.addEventListener('click', orderNowOpn);
 
 function orderNowOpn(e) {
   window.onclick = function (event) {
-    if (event.target != elements.backdrop) {
-    } else {
+    if (event.target === elements.backdrop) {
       modalClose();
     }
   };
@@ -33,6 +32,14 @@ function modalClose(e) {
   elements.heroOrderBtn.addEventListener('click', orderNowOpn);
   elements.shoppingCartBtn.addEventListener('click', orderNowOpn);
   elements.backdrop.classList.add('is-hidden');
+
+  const data = {
+    Name: elements.form[0].value,
+    Email: elements.form[1].value,
+    Tell: elements.form[2].value,
+    Comment: elements.form[3].value,
+  };
+  console.log(data);
 }
 
 function post(e) {

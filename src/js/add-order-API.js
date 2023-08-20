@@ -7,6 +7,6 @@ export async function addFetch(data) {
     .post(URL, data)
 
     .catch(function (error) {
-      console.dir(`${error.response.data.message}, try again later`);
+      console.log(`${error.response.data.message}, try again later`);
     });
 }

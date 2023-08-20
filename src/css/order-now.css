@@ -91,7 +91,7 @@
     font-weight: 600;
     line-height: 1.22;
     font-size: 18px;
-    font-style: normal;
+
     text-align: left;
     margin-bottom: 28px;
     text-transform: uppercase;
@@ -114,9 +114,6 @@
     margin-bottom: 8px;
 }
 
-/* .input-wrap {
-    position: relative;
-} */
 
 .modal-input {
     padding-left: 16px;
@@ -170,21 +167,12 @@
     color: var(--background-color);
     background-color: var(--main-text-color);
     border-radius: 15px;
-
-
     line-height: 2.18;
-    /* letter-spacing: 0.04em; */
-
     margin: 0 auto;
     margin-top: 40px;
-
     transition: color var(--common-time-func);
-
-    font-family: Inter;
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .btn-order-now:hover,
@@ -199,7 +187,6 @@
     }
 
     .modal-order-now {
-
         max-width: 440px;
         padding: 40px;
     }
@@ -221,18 +208,20 @@
         gap: 20px;
     }
 
-    .modal-field-last {}
 
     .modal-order-now {
         height: calc(100vh - 40px);
-        max-height: 400px;
+        max-height: 380px;
 
-        /* max-width: calc(100vw - 40%); */
         max-width: 650px;
         padding: 30px;
     }
 
     .comment-input {
         height: 140px;
+    }
+
+    .modal-title {
+        margin-bottom: 22px;
     }
 }
