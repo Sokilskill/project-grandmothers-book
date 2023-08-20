@@ -21,7 +21,7 @@
 
 .popular-recipe-list-li {
 display: flex;
-
+cursor: pointer;
 }
 
 .popular-recipe-list-li:not(:last-child) {
