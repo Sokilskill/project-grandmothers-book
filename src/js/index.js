@@ -4,3 +4,4 @@ import './api.js';
 import './hero-api.js';
 import './favorite-recipes.js';
 import './dark-theme.js';
+import './modal-recipe.js';
