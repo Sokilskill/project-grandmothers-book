@@ -7,8 +7,9 @@ const categorySelect = document.querySelector('.category-select');
 async function fetchCategories() {
   return axios.get('https://tasty-treats-backend.p.goit.global/api/categories');
 }
-const categories = await fetchCategories().data;
+const categories = fetchCategories().data;
 
+// await без async неможе бути
 // const categories = (await fetchCategories()).data;
 
 if (categoryHome) {
