@@ -11,7 +11,6 @@ const fetchEvents = async () => {
     const response = await fetch(`${BASE_URL}${END_POINT}`);
     const events = await response.json();
     const data = await Promise.allSettled(events);
-    console.log(data);
     swiperEl.innerHTML = markupEvents(data);
   } catch (error) {
     console.log(error.message);
@@ -22,21 +21,18 @@ fetchEvents();
 new Swiper('.swiper', {
   modules: [Pagination],
   allowTouchMove: true,
-  loop: true,
   breakpointsBase: 'hero-slider',
-  // onAny(eventName, ...args) {
-  //   console.log('Event: ', eventName);
-  //   console.log('Event data: ', args);
-  // },
   createElements: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 });
+
+
 const swiper = document.querySelector('.swiper');
 
-// swiper.slideNext();
+
 
 function markupEvents(arr) {
   return arr
