@@ -411,6 +411,10 @@
   background-color: #839730;
 }
 
+.hidden-itm {
+  display: none;
+}
+
 .hidden-btn {
   display: none;
 }

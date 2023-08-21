@@ -6,18 +6,41 @@ export default class Pagination {
     this.time = null;
     this.area = '';
     this.ingredient = '';
-    this.page = 1;
-    this.limit = 400;
-    this.category = ''; 
-    this.recipe = [];
+    this.page = 3;
+    this.limit = 6;
+    this.category = '';
+    this.totalRecipe = 0;
   }
 
-  newRecipesList(mass) {
-    this.recipe.push(...mass)
+  incr() {
+    this.page += 1;
   }
-  allrecipeMas() {
-    return this.recipe
+  decr() {
+    this.page -= 1;
   }
+
+  get total() {
+    return this.totalRecipe;
+  }
+
+  set total(newTotal) {
+    this.totalRecipe = newTotal;
+  }
+
+  get startValue() {
+    return this.start;
+  }
+  set startValue(newStart) {
+    this.start = newStart;
+  }
+
+  get endValue() {
+    return this.end;
+  }
+  set endValue(newEnd) {
+    this.end = newEnd;
+  }
+
   get req() {
     return this.request;
   }
@@ -65,7 +88,5 @@ export default class Pagination {
   }
   set categories(newCategory) {
     this.category = newCategory;
-    }
-    
-
+  }
 }

@@ -20,9 +20,9 @@ const refs = {
   btnEnd: document.querySelector('.btn-end'),
   categoryBtn: document.querySelector('.categories-list'),
   allCatBtn: document.querySelector('all-categories-btn'),
+  pagBtn: document.querySelector('.page-pagination-list'),
 };
-
-
+hidden(refs.pagBtn);
 createSelect(refs.selectTime, '0 min');
 
 getApi('areas').then(r => {
@@ -33,51 +33,157 @@ getApi('areas').then(r => {
 getApi('ingredients').then(r => {
   refs.selectIngredients.insertAdjacentHTML(
     'beforeend',
-    stringConcatenation(r)
+    stringConcatenationIng(r)
   );
   createSelect(refs.selectIngredients, 'Product');
 });
 
+initialRecipeWindow();
 getAllRecipes().then(r => {
-  pagination.newRecipesList(r.results)
-  initialRecipeWindow();
+  if (r) {
+    createCards(r.results);
+    appdateTotal(r.totalPages);
+    console.log(pagination.total);
+    rmHidden(refs.pagBtn);
+  }
 })
 
+refs.categoryBtn.addEventListener('click', onClickBtnRecipeInAll);
+refs.selectTime.addEventListener('change', onChangeTime)
+refs.selectArea.addEventListener('change', onChangeArea);
+refs.selectIngredients.addEventListener('change', onChangeIngredients);
+refs.btnBegin.addEventListener('click', onClickBegininPage);
+refs.btnPrev.addEventListener('click', onClickPrevPage);
+refs.btnFirst.addEventListener('click', onClickBegininPage);
 
 
 
 
 
 
+function onClickBegininPage(e) {
+  refs.recipeList.innerHTML = '';
+  pagination.pages = 1;
+  getAllRecipes().then(r => {
+    createCards(r.results);
+    appdateTotal(r.totalPages);
+    console.log(pagination.total);
+    if (pagination.totalRecipe === null) {
+      alert('Wuups');
+      hidden(refs.pagBtn);
+      return;
+    }
+  });
 
+}
+function onClickPrevPage(e) {
+  if (pagination.page > 1) {
+    refs.recipeList.innerHTML = '';
+    pagination.decr();
+    getAllRecipes().then(r => {
+      createCards(r.results);
+      appdateTotal(r.totalPages);
+      console.log(pagination.total);
+    });
+  }
+  
+}
 
+function onClickSecondPage(e) {
 
+}
+function onClickThirdPage(e) {
 
+}
+function onClickShowOtherPage(e) {
 
+}
+function onClickLastPage(e) {
+  
+}
 
+function onClickBtnRecipeInAll(e) {
+  pagination.categories = e.target.dataset.value;
+  refs.recipeList.innerHTML = '';
 
+  getAllRecipes().then(r => {
+    createCards(r.results);
+    appdateTotal(r.totalPages);
+    console.log(pagination.total);
+    if (pagination.totalRecipe === null) {
+      alert('Wuups')
+      hidden(refs.pagBtn);
+      return
+    }
+  });
+}
+
+function onChangeIngredients(e) {
+  pagination.ingredients = e.target.value;
+  clearCardsList();
+  getAllRecipes().then(r => {
+    createCards(r.results);
+    appdateTotal(r.totalPages);
+    console.log(pagination.total);
+    if (pagination.totalRecipe === null) {
+      alert('Wuups');
+      hidden(refs.pagBtn);
+      return;
+    }
+  });
+}
+
+function onChangeArea(e) {
+  pagination.areas = e.target.value;
+  clearCardsList();
+  getAllRecipes().then(r => {
+    createCards(r.results);
+    appdateTotal(r.totalPages);
+    console.log(pagination.total);
+    if (pagination.totalRecipe === null) {
+      alert('Wuups');
+      hidden(refs.pagBtn);
+      return;
+    }
+  });
+}
+
+function onChangeTime(e) {
+  pagination.times = e.target.value;
+  clearCardsList();
+  getAllRecipes().then(r => {
+    createCards(r.results);
+    appdateTotal(r.totalPages);
+    console.log(pagination.total);
+    if (pagination.totalRecipe === null) {
+      alert('Wuups');
+      hidden(refs.pagBtn);
+      return;
+    }
+  });
+}
+
+function clearCardsList() {
+  refs.recipeList.innerHTML = '';
+}
 
 function initialRecipeWindow() {
   if (window.screen.width < 768) {
-    // установка числа мин и макс для мобилки через гетеры, добавить
-    const result = quantityСalculation();
-    refs.recipeList.insertAdjacentHTML('beforeend', addingСards(result));
+    pagination.limits = 6;
   } else if (window.screen.width < 1280) {
-    
+    pagination.limits = 8;
   } else {
-    
+    pagination.limits = 9;
   }
 }
 
-
-function quantityСalculation() {
-  return pagination.allrecipeMas().slice(pagination.start, pagination.end);
+function createCards(result) {
+  refs.recipeList.insertAdjacentHTML('beforeend', addingСards(result));
 }
 
-
-
-
-
+function appdateTotal(tot) {
+  pagination.total = tot;
+}
 
 function addingСards(el) {
   return el.map(({ title, description, _id, rating, thumb }) => {
@@ -295,6 +401,14 @@ function stringConcatenation(ms) {
   }).join('')
 }
 
+function stringConcatenationIng(ms) {
+  return ms
+    .map(({ _id, name }) => {
+      return `<option value="${_id}">${name}</option>`;
+    })
+    .join('');
+}
+
 function getApi(tag) {
   return axios.get(`${BASE_URL}${tag}`).then(r=>r.data)
 }
@@ -311,3 +425,10 @@ function createSelect(select, placehold) {
   });
 }
 
+function hidden(itm) {
+  itm.classList.add('hidden-itm');
+}
+
+function rmHidden(itm) {
+  itm.classList.remove('hidden-itm');
+}
