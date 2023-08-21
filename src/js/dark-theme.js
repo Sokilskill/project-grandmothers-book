@@ -2,18 +2,26 @@ const switchElement = document.querySelector('#switch');
 const switchElement2 = document.querySelector('#switch2');
 const body = document.querySelector('body');
 const logoImg = document.getElementById('logo-img');
+
+const logoImgDark = document.getElementById('logo-img-dark');
+
 console.log('before', logoImg.src);
+
 
 function darkmode() {
   if (switchElement.checked || switchElement.checked2) {
     localStorage.setItem('darkmode', 'true');
     body.classList.add('dark-theme');
-    logoImg.src = './img/logo-dark-theme.svg';
+
+    logoImg.style.display = 'none';
+    logoImgDark.style.display = 'block';
     console.log('dark', logoImg.src);
+
   } else {
     localStorage.setItem('darkmode', 'false');
     body.classList.remove('dark-theme');
-    logoImg.src = './img/header/logo.svg';
+    logoImg.style.display = 'block';
+    logoImgDark.style.display = 'none';
   }
 }
 
