@@ -30,5 +30,7 @@
   .hero-swipe-dot:first-child {
     color: var(--main-text-color);
   }
-
+  .no-one-text {
+    color: var(--default-color);
+  }
 }
