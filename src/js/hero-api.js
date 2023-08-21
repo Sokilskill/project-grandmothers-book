@@ -29,6 +29,11 @@ new Swiper('.swiper', {
   },
 });
 
+
+const swiper = document.querySelector('.swiper');
+
+
+
 function markupEvents(arr) {
   return arr
     .map(

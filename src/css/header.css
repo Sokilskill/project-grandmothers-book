@@ -1,3 +1,7 @@
+.header-wrapper {
+  position: relative;
+}
+
 .header-wrap {
   display: flex;
   justify-content: space-between;
@@ -48,15 +52,16 @@
 
 /* -modal mob menu- */
 .mob-menu {
+  --size-heigth: calc(100vh / 3.5);
   position: fixed;
-  z-index: 20;
+  z-index: 40;
   top: 0;
   right: 0;
-  padding: 230px 74px 0;
+  padding: var(--size-heigth) 74px 0;
 
   background-color: var(--main-text-color, #9bb537);
   min-width: 200px;
-  width: 40vw;
+  width: calc(100vw / 3);
   height: 100vh;
 
   transform: translateX(110%);
