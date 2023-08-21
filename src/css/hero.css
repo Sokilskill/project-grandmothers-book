@@ -75,7 +75,7 @@
   border-radius: 15px;
   overflow: hidden;
   border: 1px solid var(--border-color, #9bb5374c);
-  background-image: url(./img/hero/shadow-swip-1mg.png),
+  background-image: url('./img/hero/shadow-swip-1mg.png'),
     var(--hero-gradient, linear-gradient(#050505, #050505));
 }
 .swiper-card-viev {
