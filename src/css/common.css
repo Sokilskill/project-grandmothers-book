@@ -28,6 +28,7 @@
   --border-color: #9bb5374c;
   --card-text-color: #f8f8f899;
   --origin-text-color: #f8f8f833;
+  --hero-gradient: linear-gradient(#050505, #050505);
   /* dark-theme */
   --bodyback: #f8f8f8;
   --label1: #cecdcd;
