@@ -8,9 +8,13 @@
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
+@import url('./categories.css');
+@import url('./favorite-categories.css');
 @import url('./favorite-recipes.css');
 @import url('./light-theme.css');
 @import url('./modal-recipe.css');
+@import url('../../node_modules/modern-normalize/modern-normalize.css');
+@import url('./order-now.css');
 @import url('./favorites-card.css');
 @import url('./dark-theme.css');
 :root {
@@ -45,6 +49,7 @@ body {
   background-color: var(--background-color, #f8f8f8);
   transition: all 0.3s ease;
 }
+
 .container {
   max-width: 372px;
   margin: 0 auto;
@@ -77,8 +82,8 @@ body {
 /* html.dark body {
   background-color: var(--secondary-background-color, #050505);
 } */
-
-/* html.dark {
+/* 
+html.dark :root {
   --main-text-color: red;
   --background-color: #050505;
 } */
