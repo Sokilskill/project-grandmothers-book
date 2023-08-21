@@ -20,11 +20,18 @@
 .nav-link-home {
   color: var(--main-text-color, #9bb537);
 }
+
 .nav-link-favorites {
   font-weight: 400;
   color: var(--secondary-text-color, #050505);
 }
 
+body.active .nav-link-favorites {
+  color: var(--main-text-color, #9bb537);
+}
+body.active .nav-link-home {
+  color: var(--secondary-text-color, #050505);
+}
 .logo-link {
   padding: 28px 0;
 }

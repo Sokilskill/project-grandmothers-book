@@ -11,7 +11,7 @@ fetch("https://tasty-treats-backend.p.goit.global/api/recipes/popular")
   .catch(err => console.log(err))
   .then(data => {
     const recipe = data.map((data) => {
-        return `<li class="popular-recipe-list-li">
+      return `<li class="popular-recipe-list-li" data-recipe-id="${data._id}">
         <div class="favorite-list-img">
         <img class="round-img-1" src="${data.preview}" alt="${data.title}">
       </div>
@@ -23,4 +23,3 @@ fetch("https://tasty-treats-backend.p.goit.global/api/recipes/popular")
     });
     recipe_list.insertAdjacentHTML('beforeend', recipe.join(''));
   });
-  
