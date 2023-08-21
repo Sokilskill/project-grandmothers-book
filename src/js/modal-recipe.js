@@ -1,10 +1,11 @@
+const recipe_list = document.querySelector('.popular-recipe-list');
 const modalContainer = document.getElementById('modalContainer');
 let player;
 
 recipe_list.addEventListener('click', async function (event) {
     const clickedRecipe = event.target.closest('.popular-recipe-list-li');
     if (clickedRecipe) {
-        const recipeID = clickedRecipe.dataset.recipeId; 
+        const recipeID = clickedRecipe.dataset.recipeId;
         openRecipeModal(recipeID);
     }
 });
