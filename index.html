@@ -12,10 +12,11 @@
     />
 
     <title>Tasty Treats</title>
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
     
-    <script type="module" crossorigin src="/project-grandmothers-book/assets/index-4b8ccc0e.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-grandmothers-book/assets/categories-d7ec6547.js">
-    <link rel="stylesheet" href="/project-grandmothers-book/assets/categories-514058f3.css">
+    <script type="module" crossorigin src="/project-grandmothers-book/assets/index-0122d0d5.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-grandmothers-book/assets/categories-cfa2064f.js">
+    <link rel="stylesheet" href="/project-grandmothers-book/assets/categories-b2efa83c.css">
     <link rel="stylesheet" href="/project-grandmothers-book/assets/index-0705b292.css">
   </head>
   <body class="light-theme">
@@ -58,7 +59,7 @@
         <!-- shopping cart  -->
         <button type="button" class="shopping-cart">
           <svg class="shopping-cart-icon" width="24" height="24">
-            <use href="/project-grandmothers-book/assets/icons-b89ab58f.svg#icon-shopping-cart"></use>
+            <use href="/project-grandmothers-book/assets/icons-3ef4a107.svg#icon-shopping-cart"></use>
           </svg>
         </button>
 
@@ -76,7 +77,7 @@
           aria-controls="mobile-menu"
         >
           <svg class="btn-open-menu-icon" width="24" height="24">
-            <use href="/project-grandmothers-book/assets/icons-b89ab58f.svg#icon-burger-menu"></use>
+            <use href="/project-grandmothers-book/assets/icons-3ef4a107.svg#icon-burger-menu"></use>
           </svg>
         </button>
       </div>
@@ -87,7 +88,7 @@
     <div class="mob-menu js-mob-menu" id="mobile-menu">
       <button type="button" class="button-close js-close-menu">
         <svg class="close-icon" width="32" height="32">
-          <use href="/project-grandmothers-book/assets/icons-b89ab58f.svg#icon-button-close"></use>
+          <use href="/project-grandmothers-book/assets/icons-3ef4a107.svg#icon-button-close"></use>
         </svg>
       </button>
 
@@ -161,10 +162,9 @@
 
 
     <!-- Andrii Polatovskyi/Oleksandr Tsurkan -->
-    
-<div class="container">
     <section class="sidebar">
-    <div class="categories">
+    <div class="container">
+        <div class="categories">
     <div>
         <button data-value="0" class="all-categories-btn active-all-categories">All categories</button>
     </div>
@@ -190,20 +190,136 @@
     </select>
 </div>
 
-    <div class="popular-recipe-div">
+        <div class="popular-recipe-div">
     <h2 class="popular-recipe-h2">Popular recipes</h2>
     <ul class="popular-recipe-list">
     </ul>
 </div>
-</section>
+        <div class="filtering-recipes">
+  <form class="search-form">
+    <label class="l-select">
+      <span class="input-name">Search</span>
+      <div class="thumb-input">
+        <svg class="svg-search">
+          <use href="../img/icons.svg#icon-search"></use>
+        </svg>
+        <input
+          type="text"
+          name="search-recipe"
+          autocomplete="off"
+          placeholder="Enter Text"
+          id="search-recipe"
+        />
+      </div>
+    </label>
+    <label class="l-select sel-time">
+      <span class="input-name">Time</span>
+      <select name="filtr-time" class="filtr filtr-time">
+        <option data-placeholder="true"></option>
+        <option value="5" id="5">5 min</option>
+        <option value="10" id="10">10 min</option>
+        <option value="15" id="15">15 min</option>
+        <option value="20" id="20">20 min</option>
+        <option value="25" id="25">25 min</option>
+        <option value="30" id="30">30 min</option>
+        <option value="35" id="35">35 min</option>
+        <option value="40" id="40">40 min</option>
+        <option value="45" id="45">45 min</option>
+        <option value="50" id="50">50 min</option>
+        <option value="55" id="55">55 min</option>
+        <option value="60" id="60">60 min</option>
+        <option value="65" id="65">65 min</option>
+        <option value="70" id="70">70 min</option>
+        <option value="75" id="75">75 min</option>
+        <option value="80" id="80">80 min</option>
+        <option value="85" id="85">85 min</option>
+        <option value="90" id="90">90 min</option>
+        <option value="95" id="95">95 min</option>
+        <option value="100" id="100">100 min</option>
+        <option value="105" id="105">105 min</option>
+        <option value="110" id="110">110 min</option>
+        <option value="115" id="115">115 min</option>
+        <option value="120" id="120">120 min</option>
+      </select>
+    </label>
+    <label class="l-select">
+      <span class="input-name">Area</span>
+      <select name="filtr-area" class="filtr filtr-area">
+        <option data-placeholder="true"></option>
+        <!-- <option value="" id=""></option> -->
+      </select>
+    </label>
+    <label class="l-select">
+      <span class="input-name">Ingredients</span>
+      <select name="filtr-ingredients" class="filtr filtr-ingredients">
+        <option data-placeholder="true"></option>
+        <!-- <option value="" id=""></option> -->
+      </select>
+    </label>
+    <button type="button" class="btn-reset-filtr">
+      <svg class="svg-reset">
+        <use href="../img/icons.svg#icon-reset"></use>
+        </svg>Reset the filter
+    </button>
+  </form>
+  <div class="all-recipe">
+    <div class="cards-recipe">
+    </div>
+
+    <ul class="page-pagination-list">
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-beginning bc">
+          <svg class="svg-switch-duo">
+            <use href="../img/icons.svg#icon-beginning"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-previous bc">
+          <svg class="svg-switch">
+            <use href="../img/icons.svg#icon-previous"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-first act">1</button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-second">2</button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-third hidden-btn">3</button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-show-others">...</button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-next act">
+          <svg class="svg-switch">
+            <use href="../img/icons.svg#icon-next"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="page-pagination-item">
+        <button type="button" class="btn-list btn-end act">
+          <svg class="svg-switch-duo">
+            <use href="../img/icons.svg#icon-end"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
 </div>
+
+    </div>
+</section>
 
     <!-- Дмитро Гур'єв -->
     <div class="backdrop is-hidden">
     <div class="modal-order-now">
         <button type="button" class="modal-close-btn">
             <svg class="close-icon">
-                <use href="/project-grandmothers-book/assets/icons-b89ab58f.svg#icon-button-close"></use>
+                <use href="/project-grandmothers-book/assets/icons-3ef4a107.svg#icon-button-close"></use>
             </svg>
         </button>
         <p class="modal-title">Order now</p>
@@ -252,7 +368,7 @@
     <!-- Denys Muratov -->
     <div id="modalContainer" class="modal"></div>
 
-<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+<script src="https://www.youtube.com/iframe_api"></script>
 
 
     <!--  -->
