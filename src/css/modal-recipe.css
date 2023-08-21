@@ -48,6 +48,12 @@
   margin-right: 8px;
 }
 
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 .ingredient-name {
   font-size: 14px;
   font-weight: 400;
@@ -78,20 +84,6 @@
   line-height: calc(18 / 14);
   text-align: left;
   color: var(--secondary-alfa-text-color, rgba(5, 5, 5, 0.5));
-}
-
-/* Styles for the button */
-#openModalBtn {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 15px;
-}
-
-#openModalBtn:hover {
-  background-color: #0056b3;
 }
 
 /* Styles for the buttons */
