@@ -48,6 +48,12 @@
   margin-right: 8px;
 }
 
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 .ingredient-name {
   font-family: Inter;
   font-size: 14px;
@@ -102,6 +108,7 @@
 #openModalBtn:hover {
   background-color: #0056b3;
 }
+
 
 /* Styles for the buttons */
 
